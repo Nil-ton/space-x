@@ -4,6 +4,8 @@ This is the challenge [Fullstack Challenge 🏅 Space X API](./FullstackChalleng
 
 Backend [here](https://github.com/Nil-ton/Space-X-API)
 
+Application in production: [space-x-plum.vercel.app
++1](https://space-x-plum.vercel.app/)
 
 # Technologies
 
