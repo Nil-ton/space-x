@@ -35,7 +35,7 @@ enum Head {
 }
 
 export default function Home() {
-  const {data,page,setData,setPage} = useData()
+  const {data,page,setData,setPage,dataClear} = useData()
   const {searchOptions, setSearchOptions} = useSearchOptions()
   const heads = Object.values(Head);
   const formatter = new Intl.DateTimeFormat();
@@ -51,9 +51,16 @@ export default function Home() {
   );
 
   React.useEffect(() => {
-    setData(queries, searchValue,page)
-  }, [page, queries, searchValue, setData]);
+    setData(queries,page)
+  }, [page, queries, setData]);
   
+
+  React.useEffect(() => {
+    if(searchValue === "") {
+      dataClear()
+      clearQueries(searchValue)
+    }
+  },[clearQueries, dataClear, searchValue])
 
   React.useEffect(() => {
     setSearchOptions()
