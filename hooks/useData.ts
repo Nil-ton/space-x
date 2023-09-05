@@ -21,11 +21,11 @@ export const useData = create<props>((set) => {
       } else {
         fetch(`https://space-x-api-7me1.onrender.com/launches?page=${page}`)
         .then((res) => res.json())
-        .then((res) => set((state) => ({ ...state,data: state.dataReset ?  state.dataReset : res, dataReset: res })))
+        .then((res) => set((state) => ({ ...state,data: res, dataReset: res })))
       }
     },
     dataClear: () => {
-      set((state) => ({ ...state, data: state.dataReset }))
+      set((state) => ({ ...state, data: state.dataReset, page: 1 }))
     },
     setPage: (item) => set((state) => ({...state, page: item})),
     page: 1,
