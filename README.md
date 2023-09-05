@@ -2,7 +2,7 @@
 
 This is the challenge [Fullstack Challenge 🏅 Space X API](./FullstackChallenge.md) frontend.
 
-Backend [here](https://github.com/Nil-ton/Space-X-API)
+Backend [here](https://github.com/Nil-ton/Space-X-API/blob/main/FullstackChallenge.md)
 
 Application in production: [space-x-plum.vercel.app
 +1](https://space-x-plum.vercel.app/)

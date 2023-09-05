@@ -21,7 +21,7 @@ export const useData = create<props>((set) => {
       } else {
         fetch(`https://space-x-api-7me1.onrender.com/launches?page=${page}`)
         .then((res) => res.json())
-        .then((res) => set((state) => ({ ...state,data:res, dataReset: res })))
+        .then((res) => set((state) => ({ ...state,data: state.dataReset ?  state.dataReset : res, dataReset: res })))
       }
     },
     dataClear: () => {
